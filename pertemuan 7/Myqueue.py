@@ -1,23 +1,22 @@
 class Myqueue:
     def __init__(self):
-        self . item = []
+        self.items = []
     def enQueue(self, item):
-        self.item.append (item)
-    def deQueu(self):
-        return self.item.pop(0)
+        self.items.append(item)
+    def deQueue(self):
+        return self.items.pop(0)
     def isEmpty(self):
-        return self.item == []
+        return len(self.items) == 0 
     def front(self):
-        return self.item(0)
+        return self.items[0]
     def show(self):
-        print(self.item)
+        print(self.items)
 queue = Myqueue()
-print(queue.isEmpty())
+print(queue.isEmpty())        
 queue.enQueue(1)
 queue.enQueue(2)
 queue.enQueue(3)
 queue.show()
-print(f"antrian terdepan adalah: [quwuw.front()]")
-queue.deQueu
-print(f"antrian terdepan adalah: [queue.front()]")
-
+print(f"antrian terdepan adalah: {queue.front()}")
+queue.deQueue()
+print(f"antrian terdepan adalah: {queue.front()}")
